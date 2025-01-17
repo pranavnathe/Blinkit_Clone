@@ -13,6 +13,7 @@ dist-ssr
 .env
 .env.local
 temp
+assets
 uploads/*
 
 # Editor directories and files
