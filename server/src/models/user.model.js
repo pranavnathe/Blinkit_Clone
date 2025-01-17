@@ -27,6 +27,7 @@ const customerSchema = new mongoose.Schema({
     },
     role: {
         type: String,
+        enum: ["Customer"],
         default: "Customer",
     },
     liveLocation: {
@@ -62,11 +63,12 @@ const adminSchema = new mongoose.Schema({
     password: { type: String, required: true },
     role: {
         type: String,
+        enum: ["Admin"],
         default: "Admin",
     },
 });
 
-export const User = mongoose.model("Customer", customerSchema);
+export const Customer = mongoose.model("Customer", customerSchema);
 export const DeliveryPartner = mongoose.model(
     "DeliveryPartner",
     deliveryPartnerSchema
