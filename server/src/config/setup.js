@@ -7,6 +7,8 @@ import { authenticate, COOKIE_SECRET, sessionStore } from "./config.js";
 import { dark, light } from "@adminjs/themes";
 import Product from "../models/product.model.js";
 import Category from "../models/category,model.js";
+import Order from "../models/order.model.js";
+import Counter from "../models/counter.model.js";
 
 AdminJS.registerAdapter(AdminJSMongoose);
 
@@ -41,6 +43,12 @@ export const admin = new AdminJS({
         },
         {
             resource: Category,
+        },
+        {
+            resource: Order,
+        },
+        {
+            resource: Counter,
         },
     ],
     branding: {
