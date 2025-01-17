@@ -5,6 +5,8 @@ import { Admin, Customer, DeliveryPartner } from "../models/user.model.js";
 import { Branch } from "../models/branch.model.js";
 import { authenticate, COOKIE_SECRET, sessionStore } from "./config.js";
 import { dark, light } from "@adminjs/themes";
+import Product from "../models/product.model.js";
+import Category from "../models/category,model.js";
 
 AdminJS.registerAdapter(AdminJSMongoose);
 
@@ -33,6 +35,12 @@ export const admin = new AdminJS({
         },
         {
             resource: Branch,
+        },
+        {
+            resource: Product,
+        },
+        {
+            resource: Category,
         },
     ],
     branding: {
