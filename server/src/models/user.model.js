@@ -44,6 +44,7 @@ const deliveryPartnerSchema = new mongoose.Schema({
     phone: { type: String, required: true, unique: true },
     role: {
         type: String,
+        enum: ["DeliveryPartner"],
         default: "DeliveryPartner",
     },
     liveLocation: {
